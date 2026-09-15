@@ -111,6 +111,7 @@ import { useState, useEffect, useCallback } from "react";
       setScraping(true);
       setGlobalScraping(true);
       setScrapeMessage(null);
+      setShowScrapeErrors(false);
       setScrapeErrors([]);
 
       try {
