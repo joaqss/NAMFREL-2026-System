@@ -15,7 +15,7 @@ router = APIRouter(prefix="/api/news", tags=["news"])
 
 @router.post("/scrape")
 def trigger_scrape(
-    db: Session = Depends(get_db)
+    db: Session = Depends(get_db),
     profile: Profile = Depends(require_roles("admin", "super_admin"))
 ):
     """Trigger a news scrape with a global PostgreSQL lock."""
